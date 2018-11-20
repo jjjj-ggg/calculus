@@ -42,9 +42,10 @@ for i in rangee:
     fi = eval(f)
     p = round(((fh-fi)/h), 5)
     print("(", x, ", " , p, ")")
-    
-x = b
-while eval(f)>=-0.01 and eval(f)<=0.01:
+
+x=b    
+i = eval(f)
+while i>=-0.01 and i<=0.01:
     x=i
     fx=eval(f)
     x=i-.01
@@ -52,6 +53,7 @@ while eval(f)>=-0.01 and eval(f)<=0.01:
     fprime= (fx-fxb)/.01
     xn=i-(fx/fprime)
     x=xn
-    print("point", xn, eval(f)) 
+    i=eval(f)
+    print("point", xn, i) 
 xn=i
 print("Newton's Method!!!", xn, eval(f)) 
