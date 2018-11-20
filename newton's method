@@ -1,1 +1,44 @@
+from math import sin, cos, tan, radians, log, e
 
+#inputs
+f = input("enter a function equal to f(x) in terms of x: ")         #user inputs the funciton they want
+a = int(input("what is the lower limit of your interval?: "))      #user inputs the domain of the function 
+b = int(input("what is the upper limit of your interval?: "))      #user inputs the domain of the function
+print("interval: [", a, " , ", b , " ]")
+rangee = list(range(a,b+1))
+
+h = 0.000001                 #defines delta x or h
+
+
+########_finds f'
+f1 = []                         # creates f1 which is a list that will contain y values for the function
+for x in range(a,b+1):
+    hk = eval(f)
+    f1.append(hk)           #calcuates f(x) and puts in f1
+
+
+
+fprime = []     #creates a list that will contain fprimes
+crit = [a]
+for x in range (a,b+1):         
+   x = h+x                      #redefines x as x + h to find f(x+h)
+   fh= eval(f)                  #calculates f(x+h)
+   x = float(x-h+.1)-a            #redefines x so that it points to the coresponding f(x) value in f1
+   p = round(((fh-f1[x])/h), 5) #rounds fprime
+   fprime.append(p)             # calculates the derivitive using the definition of a derivitive and puts in fprime
+  
+print("f(x):" )
+for i in rangee:
+    x=i
+    y=eval(f)
+    print("(", x, ", " , y, ")")
+print("")
+
+print("f'(x):" )
+for i in rangee:
+    x=i+h
+    fh =eval(f)
+    x = i
+    fi = eval(f)
+    p = round(((fh-fi)/h), 5)
+    print("(", x, ", " , p, ")")
