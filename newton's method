@@ -43,9 +43,9 @@ for i in rangee:
     p = round(((fh-fi)/h), 5)
     print("(", x, ", " , p, ")")
 
-x=b    
-i = eval(f)
+i=b
 while i>=-0.01 and i<=0.01:
+    if eval
     x=i
     fx=eval(f)
     x=i-.01
